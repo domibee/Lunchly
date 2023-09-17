@@ -22,6 +22,7 @@ router.get("/", async function(req, res, next) {
 
 router.get("/add/", async function(req, res, next) {
   try {
+    
     return res.render("customer_new_form.html");
   } catch (err) {
     return next(err);
@@ -111,5 +112,7 @@ router.post("/:id/add-reservation/", async function(req, res, next) {
     return next(err);
   }
 });
+
+
 
 module.exports = router;
